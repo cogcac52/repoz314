@@ -15,13 +15,12 @@ sealed class Screen(val route: String) {
 }
 
 @Composable
-fun AppNavHost(navController: NavHostController, startDestination: String = Screen.Login.route) {
+fun AppNavHost(navController: NavHostController, startDestination: String = Screen.Services.route) {
     NavHost(navController = navController, startDestination = startDestination) {
-        composable(Screen.Login.route) { LoginScreen() }
+        // composable(Screen.Login.route) { LoginScreen() } // временно закомментировано
         composable(Screen.Services.route) { ServicesScreen() }
         composable(Screen.Booking.route) { BookingScreen() }
         composable(Screen.Profile.route) { ProfileScreen() }
         composable(Screen.AdminDashboard.route) { AdminDashboardScreen() }
     }
 }
-
