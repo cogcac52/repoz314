@@ -30,4 +30,3 @@ class ServiceViewModel(private val repository: ServiceRepository = ServiceReposi
         }
     }
 }
-
